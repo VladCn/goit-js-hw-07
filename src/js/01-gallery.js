@@ -1,17 +1,14 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
-// console.log(galleryItems);
-
 const conteiner = document.querySelector('.gallery')
 const cards = createColorCards(galleryItems)
-// const modal = createModal()
 
 conteiner.insertAdjacentHTML("beforeend", cards)
-// conteiner.insertAdjacentHTML("beforeend", createModal())
 conteiner.addEventListener("click", openModal)
 
 function openModal(evt){
     evt.preventDefault()
+
     if(!evt.target.classList.contains("gallery__image")){
         return;
     }
@@ -32,7 +29,6 @@ function openModal(evt){
             />
             </div>
             </template>`
-
 
     conteiner.insertAdjacentHTML("beforeend", modalCreate)
 
@@ -66,13 +62,3 @@ function createColorCards(gallery){
 createColorCards(galleryItems)
 
 
-// < template >
-// < div
-// className = "modal" >
-//     < img
-// className = "gallery__image"
-// src = "${original}"
-// alt = "${description}"
-//     / >
-//     < /div>
-// </template>
