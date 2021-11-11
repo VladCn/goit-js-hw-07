@@ -7,7 +7,7 @@ const cards = createColorCards(galleryItems)
 
 conteiner.insertAdjacentHTML("beforeend", cards)
 
-new SimpleLightbox('.gallery a', {captionsData: "alt"});
+new SimpleLightbox('.gallery a', {captionsData: "alt", animationSpeed: "250"});
 
 
 function createColorCards(gallery){
